@@ -225,7 +225,7 @@ h1 {
 }
 
 .imge {
-    margin-top: 8%;
+    margin-top: 30%;
     border-radius: 10px;
     height: 550px;
     width: 350px;
@@ -412,7 +412,6 @@ li {
 /*Certificados*/
 .section05 {
     padding-top: 25%;
-    width: 100%;
 }
 
 .section05 h2 {
@@ -457,7 +456,6 @@ li {
 /*Contatos*/
 .section06 {
     padding-top: 8%;
-    width: 100%;
 }
 
 .des07 {
