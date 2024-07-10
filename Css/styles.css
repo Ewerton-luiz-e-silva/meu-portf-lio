@@ -203,8 +203,10 @@ h1 {
 }
 
 .des {
-    height: 600px;
-    width: 450px;
+    margin-top: 1%;
+    padding: 1%;
+    height: 500px;
+    width: 700px;
 }
 
 .des h1 {
@@ -225,8 +227,8 @@ h1 {
 .imge {
     margin-top: 30%;
     border-radius: 10px;
-    height: 600px;
-    width: 450px;
+    height: 550px;
+    width: 350px;
 }
 
 /* Sobre */
@@ -263,7 +265,13 @@ ul {
     width: 30px;
 }
 
-li {
+li{
+    height: 30px;
+    width: 30px;
+}
+
+.section02 li {
+    margin: 7%;
     height: 30px;
     width: 30px;
 }
@@ -288,7 +296,7 @@ li {
 .section03 {
     display: flex;
     justify-content: center;
-    padding-top: 8%;
+    padding-top: 13%;
     width: 100%;
 }
 
@@ -530,7 +538,6 @@ body.light-mode {
     background-color: #f4f4f4;
     color: black;
 }
-
 /* Media Queries */
 @media (max-width: 768px) {
     .menu-toggle {
