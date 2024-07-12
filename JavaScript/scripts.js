@@ -42,7 +42,7 @@ autoModeButton.addEventListener('click', activateAutoMode);
 window.addEventListener('load', activateAutoMode);
 
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "Olá,Sou Ewerton Desenvolvedor em Ascensão.";
+    const text = "Olá,Sou Ewerton Desenvolvedor em Ascensão. ";
     const typingText = document.getElementById("typing-text");
     let index = 0;
     let isAdding = true;
