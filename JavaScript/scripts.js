@@ -1,3 +1,4 @@
+
 // Seleciona os elementos do DOM
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
@@ -40,4 +41,31 @@ autoModeButton.addEventListener('click', activateAutoMode);
 // Ativa o modo automático ao carregar a página
 window.addEventListener('load', activateAutoMode);
 
+document.addEventListener("DOMContentLoaded", function() {
+    const text = "Olá,Sou Ewerton Desenvolvedor em Ascensão.";
+    const typingText = document.getElementById("typing-text");
+    let index = 0;
+    let isAdding = true;
 
+    function type() {
+        typingText.innerHTML = text.substring(0, index) + "<span class='caret'></span>";
+        if (isAdding) {
+            if (index < text.length) {
+                index++;
+            } else {
+                isAdding = false;
+                setTimeout(type, 2000); // Pausa de 2 segundos ao terminar de digitar
+                return;
+            }
+        } else {
+            if (index > 0) {
+                index--;
+            } else {
+                isAdding = true;
+            }
+        }
+        setTimeout(type, isAdding ? 100 : 50); // Aumentar e diminuir a velocidade
+    }
+
+    type();
+});
