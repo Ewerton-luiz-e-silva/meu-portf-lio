@@ -1,57 +1,29 @@
-
 // Seleciona os elementos do DOM
-const menuToggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
-const darkModeButton = document.getElementById('dark-mode');
-const lightModeButton = document.getElementById('light-mode');
-const autoModeButton = document.getElementById('auto-mode');
+const menuToggle = document.getElementById('menu-toggle'); // Botão de alternância do menu hamburger
+const menu = document.getElementById('menu'); // Menu de navegação
+const darkModeButton = document.getElementById('dark-mode'); // Botão para ativar o modo escuro
+const lightModeButton = document.getElementById('light-mode'); // Botão para ativar o modo claro
+const autoModeButton = document.getElementById('auto-mode'); // Botão para ativar o modo automático
 
 // Adiciona evento de clique para o botão do menu hamburger
 menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    menu.classList.toggle('active'); // Alterna a classe 'active' no menu para exibir ou ocultar
+    menuToggle.classList.toggle('active'); // Alterna a classe 'active' no botão do menu hamburger para animação
 });
 
-// Função para ativar o modo escuro
-const activateDarkMode = () => {
-    document.body.classList.remove('light-mode');
-    document.body.classList.add('dark-mode');
-};
-
-// Função para ativar o modo claro
-const activateLightMode = () => {
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('light-mode');
-};
-
-// Função para ativar o modo automático
-const activateAutoMode = () => {
-    const hour = new Date().getHours();
-    if (hour >= 6 && hour < 18) {
-        activateLightMode();
-    } else {
-        activateDarkMode();
-    }
-};
-
-// Adiciona eventos de clique para os botões de troca de cor
-darkModeButton.addEventListener('click', activateDarkMode);
-lightModeButton.addEventListener('click', activateLightMode);
-autoModeButton.addEventListener('click', activateAutoMode);
-
-// Ativa o modo automático ao carregar a página
-window.addEventListener('load', activateAutoMode);
-
+// Função para animação de digitação
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "Olá,Sou Ewerton Desenvolvedor em Ascensão. ";
-    const typingText = document.getElementById("typing-text");
-    let index = 0;
-    let isAdding = true;
+    const text = "Olá, Sou Ewerton</br>Desenvolvedor em Ascensão."; // Texto para digitar
+    const typingText = document.getElementById("typing-text"); // Elemento onde o texto será exibido
+    let index = 0; // Índice inicial para a animação de digitação
+    let isAdding = true; // Flag para adicionar ou remover caracteres
 
+    // Função para simular a digitação
     function type() {
-        typingText.innerHTML = text.substring(0, index) + "<span class='caret'></span>";
+        typingText.innerHTML = text.substring(0, index) + "<span class='caret'></span>"; // Atualiza o texto exibido com um cursor
         if (isAdding) {
             if (index < text.length) {
-                index++;
+                index++; // Adiciona caracteres até o final do texto
             } else {
                 isAdding = false;
                 setTimeout(type, 2000); // Pausa de 2 segundos ao terminar de digitar
@@ -59,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         } else {
             if (index > 0) {
-                index--;
+                index--; // Remove caracteres para o efeito de digitação inversa
             } else {
                 isAdding = true;
             }
         }
-        setTimeout(type, isAdding ? 100 : 50); // Aumentar e diminuir a velocidade
+        setTimeout(type, isAdding ? 100 : 100); // Define a velocidade de digitação
     }
 
-    type();
+    type(); // Inicia a animação de digitação
 });
