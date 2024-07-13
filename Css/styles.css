@@ -319,6 +319,10 @@ li:hover {
         display: block;
         text-align: center;
     }
+    
+    .des p {
+        width: 400px;
+        }
 }
 
 @media (max-width: 768px) {
