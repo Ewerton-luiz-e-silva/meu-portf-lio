@@ -53,7 +53,7 @@ nav {
 .menu-toggle {
     display: none;
 }
-.section02 .des02 p {
+.section02 .des02, .des03 p {
     text-align: justify;
 }
 
