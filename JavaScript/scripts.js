@@ -11,9 +11,8 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active'); // Alterna a classe 'active' no botão do menu hamburger para animação
 });
 
-// Função para animação de digitação
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "Olá, Sou Ewerton</br>Desenvolvedor em Ascensão."; // Texto para digitar
+    const text = "Sou Ewerton Desenvolvedor."; // Texto para digitar
     const typingText = document.getElementById("typing-text"); // Elemento onde o texto será exibido
     let index = 0; // Índice inicial para a animação de digitação
     let isAdding = true; // Flag para adicionar ou remover caracteres
@@ -41,3 +40,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     type(); // Inicia a animação de digitação
 });
+
