@@ -53,6 +53,9 @@ nav {
 .menu-toggle {
     display: none;
 }
+p {
+    text-align: justify;
+}
 
 .section01 {
     display: flex;
