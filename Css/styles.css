@@ -170,6 +170,8 @@ h2, h3 {
 }
 
 .typewriter h1 {
+    font-family: 'Special Elite', cursive;
+    height: 30px;
     display: inline-block;
     overflow: hidden;
     border-right: .15em solid #333;
@@ -319,10 +321,6 @@ li:hover {
         display: block;
         text-align: center;
     }
-    
-    .des p {
-        width: 750px;
-        }
 }
 
 @media (max-width: 768px) {
