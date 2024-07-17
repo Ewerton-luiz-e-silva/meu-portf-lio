@@ -41,3 +41,42 @@ document.addEventListener("DOMContentLoaded", function() {
     type(); // Inicia a animação de digitação
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona todas as barras de habilidades
+    const skillBars = document.querySelectorAll('.skill-bar-inner');
+
+    // Configura o observador de interseção
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const skillBar = entry.target;
+            const percentage = skillBar.getAttribute('data-percentage');
+
+            if (entry.isIntersecting) {
+                // Define a largura da barra de habilidades para iniciar a animação
+                skillBar.style.width = percentage;
+
+                // Adiciona um ouvinte de evento para a transição
+                skillBar.addEventListener('transitionend', () => {
+                    // Exibe a porcentagem ao final da transição
+                    skillBar.querySelector('.skill-bar-percentage').style.opacity = 1;
+                });
+            } else {
+                // Reseta a largura da barra de habilidades
+                skillBar.style.width = '0';
+                // Esconde a porcentagem
+                skillBar.querySelector('.skill-bar-percentage').style.opacity = 0;
+            }
+        });
+    }, {
+        threshold: 0.1 // Percentual do elemento visível na tela para ativar a observação
+    });
+
+    // Observa cada barra de habilidade
+    skillBars.forEach(skillBar => {
+        // Inicializa a largura como 0 para garantir que a animação só ocorra quando visível
+        skillBar.style.width = '0';
+        skillBar.querySelector('.skill-bar-percentage').style.opacity = 0;
+        observer.observe(skillBar);
+    });
+});
