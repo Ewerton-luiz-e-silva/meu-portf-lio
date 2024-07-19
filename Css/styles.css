@@ -57,14 +57,22 @@ nav {
 .section01 {
     display: flex;
     justify-content: center;
+    width: auto;
 }
 
 .des {
     margin-right: 5%;
+    width: 900px;
 }
 
 .des p {
     width: auto;
+    text-align: justify;
+}
+
+.imge {
+    width: 500px;
+    height: 500px;
 }
 
 .section02 {
@@ -80,8 +88,18 @@ nav {
     width: 100%;
 }
 
+.des02 p{
+    width: auto;
+    text-align: justify;
+}
+
 .des03 {
     width: 100%;
+}
+
+.des03 p {
+    width: auto;
+    text-align: justify;
 }
 
 .des02 ul li img{
@@ -316,6 +334,19 @@ li:hover {
 }
 
 /* Responsividade */
+
+@media (max-width: 1280px){
+    .section01 {
+        display: block;
+        justify-content: center;
+    }
+
+    .des {
+        width: auto;
+        margin-right: 0%;
+    }
+}
+
 @media (max-width: 1024px) {
     .menu {
         display: none;
@@ -356,6 +387,12 @@ li:hover {
         display: block;
         text-align: center;
     }
+
+    .des {
+        width: auto;
+        margin-right: 0%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -413,6 +450,12 @@ li:hover {
         max-width: 100%;
         margin: 10px 0;
     }
+
+    .des {
+        width: auto;
+        margin-right: 0%;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -437,4 +480,10 @@ li:hover {
     .contact-item label {
         font-weight: bold;
     }
+
+    .des {
+        width: auto;
+        margin-right: 0%;
+    }
+
 }
