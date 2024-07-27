@@ -136,7 +136,7 @@ nav {
     background-color: #2575fc;
     color: #fff;
     font-weight:bold;
-    padding: 10px 5px;
+    padding: 8px 2px;
     transition: background-color 0.3s, color 0.3s;
     outline: none; /* Remove outline ao focar */
     border-bottom: transparent solid 2px;
