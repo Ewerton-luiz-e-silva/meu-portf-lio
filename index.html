@@ -9,6 +9,7 @@
         <!-- title -->
         <title>Meu Portfólio Ewerton</title>
     <link rel="stylesheet" href="./Css/styles.css">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Logo Minhatura -->
@@ -27,20 +28,20 @@
 
 <body>
     <!-- header -->
-    <header>
-        <nav>
+    <header class="fixed-top">
+        <nav class="nav01">
             <!-- Botão Hamberger -->
             <div class="menu-toggle" id="menu-toggle">Menu
                 <div class="hamburger"></div>
             </div>
             <h1>Meu Portfólio</h1>
             <ul class="menu" id="menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#Sobre">Sobre</a></li>
-                <li><a href="#Habilidades">Habilidades</a></li>
-                <li><a href="#Projetos">Projetos</a></li>
-                <li><a href="#Certificado">Certificados</a></li>
-                <li><a href="#Contatos">Contato</a></li>
+                <li class="nav-item fw-bold"><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li class="nav-item fw-bold"><a href="#Sobre" class="nav-link">Sobre</a></li>
+                <li class="nav-item fw-bold"><a href="#Habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item fw-bold"><a href="#Projetos" class="nav-link">Projetos</a></li>
+                <li class="nav-item fw-bold"><a href="#Certificado" class="nav-link">Certificados</a></li>
+                <li class="nav-item fw-bold"><a href="#Contatos" class="nav-link">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -130,178 +131,198 @@
                 Descubra as habilidades e ferramentas que estou constantemente buscando conhecimento, e que me permitem
                 criar soluções criativas e funcionais para meus projetos.
             </p>
-            <ul class="ul01">
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/tv.svg" alt="Desenvolvimento Web" />
-                    </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p class="pp">
-                        Experiência em desenvolvimento fullstack com foco em tecnologias modernas.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="80%">
-                            <span class="skill-bar-percentage">80%</span>
-                        </div>
-                    </div>
-                </li>
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/image.svg" alt="Web Design" />
-                    </div>
-                    <h3>Web Design</h3>
-                    <p class="pp">
-                        Habilidade em criar layouts modernos e responsivos, com foco na experiência do usuário.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="80%">
-                            <span class="skill-bar-percentage">80%</span>
-                        </div>
-                    </div>
-                </li>
+            <nav class="nav nav-tabs nav01" data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"> <!-- Navegação com abas -->
+                <button data-bs-toggle="tab" data-bs-target="#elementos1" class="nav-link active abas" type="button">Habilidades</button> <!-- Botão para a aba "Habilidades" -->
+                <button data-bs-toggle="tab" data-bs-target="#elementos2" class="nav-link abas" type="button">Ferramentas</button> <!-- Botão para a aba "Ferramentas" -->
+                <button data-bs-toggle="tab" data-bs-target="#elementos3" class="nav-link abas" type="button">Bibliotecas</button> <!-- Botão para a aba "Bibliotecas" -->
+                <button data-bs-toggle="tab" data-bs-target="#elementos4" class="nav-link abas" type="button">% de Habilidades</button> <!-- Botão para a aba "% de habilidades" -->
+            </nav>
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/server.svg" alt="Gerenciamento de Versões" />
-                    </div>
-                    <h3>Gerenciamento de Versões</h3>
-                    <p class="pp">
-                        Experiência em ferramentas de gerenciamento de versão para controle de projetos.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="70%">
-                            <span class="skill-bar-percentage">70%</span>
+            <div class="tab-content">
+            <div class="tab-pane active" id="elementos1"> <!-- Conteúdo da elementos "Habilidades" -->
+                
+                <ul class="ul01">
+                    <li>
+                        <div>
+                            <img src="./logos/tv.svg" alt="Desenvolvimento Web" />
                         </div>
-                    </div>
-                </li>
-            </ul>
+                        <h3>Desenvolvimento Web</h3>
+                        <p class="pp">
+                            Experiência em desenvolvimento fullstack com foco em tecnologias modernas.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/image.svg" alt="Web Design" />
+                        </div>
+                        <h3>Web Design</h3>
+                        <p class="pp">
+                            Habilidade em criar layouts modernos e responsivos, com foco na experiência do usuário.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/server.svg" alt="Gerenciamento de Versões" />
+                        </div>
+                        <h3>Gerenciamento de Versões</h3>
+                        <p class="pp">
+                            Experiência em ferramentas de gerenciamento de versão para controle de projetos.
+                        </p>
+                    </li>
+                </ul>
+                
+            </div>
 
-            <ul class="ul02">
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/logo-html5.svg" alt="HTML 5" />
-                    </div>
-                    <h3>HTML 5</h3>
-                    <p class="pp">
-                        Experiência mediana, me aprimorando cada dia mais.
-                        Sempre em busca de novos desafios com a linguagem HTML.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="90%">
-                            <span class="skill-bar-percentage">90%</span>
+            <div class="tab-pane" id="elementos2"> <!-- Conteúdo da elementos "Ferramentas " -->
+                <ul class="ul02">
+                    <li>
+                        <div>
+                            <img src="./logos/logo-html5.svg" alt="HTML 5" />
                         </div>
-                    </div>
-                </li>
+                        <h3>HTML 5</h3>
+                        <p class="pp">
+                            Experiência mediana, me aprimorando cada dia mais.
+                            Sempre em busca de novos desafios com a linguagem HTML.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/logo-css3.svg" alt="CSS 3" />
+                        </div>
+                        <h3>CSS 3</h3>
+                        <p class="pp">
+                            Experiência mediana, me aprimorando cada dia mais. Tenho alguns projetos feitos com esta linguagem.
+                            Sempre em busca de novos desafios com a linguagem CSS.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/js.svg" alt="JavaScript" />
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p class="pp">
+                            Experiência com poucos projetos com esta linguagem, mas sempre aprendendo mais e mais.
+                            Sempre em busca de novos desafios com a linguagem JavaScript.
+                        </p>
+                    </li>
+                </ul> 
+            </div>
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/logo-css3.svg" alt="CSS 3" />
-                    </div>
-                    <h3>CSS 3</h3>
-                    <p class="pp">
-                        Experiência mediana, me aprimorando cada dia mais. Tenho alguns projetos feitos com esta linguagem.
-                        Sempre em busca de novos desafios com a linguagem CSS.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="85%">
-                            <span class="skill-bar-percentage">85%</span>
-                        </div>
-                    </div>
-                </li>
+            <div class="tab-pane" id="elementos3"> <!-- Conteúdo da elementos "Bibliotecas " -->
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/js.svg" alt="JavaScript" />
-                    </div>
-                    <h3>JavaScript</h3>
-                    <p class="pp">
-                        Experiência com poucos projetos com esta linguagem, mas sempre aprendendo mais e mais.
-                        Sempre em busca de novos desafios com a linguagem JavaScript.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="65%">
-                            <span class="skill-bar-percentage">65%</span>
+                <ul class="ul04">
+                    <li>
+                        <div>
+                            <img src="./logos/jQuery.jpeg" alt="jQuery" />
                         </div>
-                    </div>
-                </li>
-            </ul>
+                        <h3>jQuery</h3>
+                        <p class="pp">
+                            Minha experiência é intermediária, buscando aprimorar-me a cada dia. Estou sempre em busca de novos desafios utilizando a ferramenta jQuery.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/AOS.webp" alt="AOS" />
+                        </div>
+                        <h3>AOS</h3>
+                        <p class="pp">
+                            Tenho alguma experiência com esta ferramenta, já que a utilizei em alguns dos meus projetos, e estou em constante busca de aprimoramento. 
+                            Já executei diversos projetos utilizando a ferramenta AOS e estou sempre procurando por novos desafios para explorar suas capacidades ao máximo.
+                        </p>
+                    </li>
+    
+                    <li>
+                        <div>
+                            <img src="./logos/Bootstrap.png" alt="Bootstrap" />
+                        </div>
+                        <h3>Bootstrap</h3>
+                        <p class="pp">
+                            Minha experiência com Bootstrap envolve alguns projetos, mas estou constantemente expandindo meu conhecimento. 
+                            Estou sempre em busca de novos desafios para aprimorar meu uso dessa ferramenta.
+                        </p>
+                    </li>
+                </ul>
 
-            <ul class="ul04">
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/jQuery.jpeg" alt="jQuery" />
-                    </div>
-                    <h3>jQuery</h3>
-                    <p class="pp">
-                        Minha experiência é intermediária, buscando aprimorar-me a cada dia. Estou sempre em busca de novos desafios utilizando a ferramenta jQuery.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="85%">
-                            <span class="skill-bar-percentage">85%</span>
-                        </div>
-                    </div>
-                </li>
+            </div>
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/AOS.webp" alt="AOS" />
+            <div class="tab-pane" id="elementos4"> <!-- Conteúdo da elementos "% de habilidades " -->
+                <p>Desenvolvimento Web</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="80%">
+                        <span class="skill-bar-percentage">80%</span>
                     </div>
-                    <h3>AOS</h3>
-                    <p class="pp">
-                        Tenho alguma experiência com esta ferramenta, já que a utilizei em alguns dos meus projetos, e estou em constante busca de aprimoramento. 
-                        Já executei diversos projetos utilizando a ferramenta AOS e estou sempre procurando por novos desafios para explorar suas capacidades ao máximo.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="95%">
-                            <span class="skill-bar-percentage">95%</span>
-                        </div>
-                    </div>
-                </li>
+                </div>
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/Bootstrap.png" alt="Bootstrap" />
+                <p>Web Design</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="80%">
+                        <span class="skill-bar-percentage">80%</span>
                     </div>
-                    <h3>Bootstrap</h3>
-                    <p class="pp">
-                        Minha experiência com Bootstrap envolve alguns projetos, mas estou constantemente expandindo meu conhecimento. 
-                        Estou sempre em busca de novos desafios para aprimorar meu uso dessa ferramenta.
-                    </p>
-                </br>
-                    <p>Porcentagem de conhecimento</p>
-                    <div class="skill-bar">
-                        <div class="skill-bar-inner" data-percentage="55%">
-                            <span class="skill-bar-percentage">55%</span>
-                        </div>
+                </div>
+
+                <p>Gerenciamento de Versões</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="70%">
+                        <span class="skill-bar-percentage">70%</span>
                     </div>
-                </li>
-            </ul>
+                </div>
+
+                <p>HTML 5</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="90%">
+                        <span class="skill-bar-percentage">90%</span>
+                    </div>
+                </div>
+
+                <p>CSS 3</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="85%">
+                        <span class="skill-bar-percentage">85%</span>
+                    </div>
+                </div>
+
+                <p>JavaScript</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="65%">
+                        <span class="skill-bar-percentage">65%</span>
+                    </div>
+                </div>
+
+                <p>jQuery</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="85%">
+                        <span class="skill-bar-percentage">85%</span>
+                    </div>
+                </div>
+
+                <p>AOS</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="95%">
+                        <span class="skill-bar-percentage">95%</span>
+                    </div>
+                </div>
+
+                <p>Bootstrap</p>
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" data-percentage="55%">
+                        <span class="skill-bar-percentage">55%</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+
+
+
         </div>
     </section>
     
@@ -315,61 +336,91 @@
                     De ideias abstratas a projetos, aqui estão alguns dos
                     meus projetos mais recentes.
                 </p>
+
+                <nav class="nav nav-tabs nav02" data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"> <!-- Navegação com abas -->
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active abas" type="button">Projetos pessoais</button> <!-- Botão para a aba "Projetos pessoais" -->
+                    <!-- Colocar conteudo depois 
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link abas" type="button">Projetos feitos com EBAC</button> < Botão para a aba "Projetos feitos com EBAC" >
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link abas" type="button">Projetos de exercício da EBAC</button> < Botão para a aba "Projetos de exercício da EBAC" >-->
+                </nav>
+                
+                <div class="tab-content"> <!-- Conteúdo das abas -->
+                    <div class="tab-pane active" id="aba1"> <!-- Conteúdo da aba "Projetos pessoais" -->
+
+                        <ul class="ul03">
+
+                            <li>
+                                <div>
+                                    <img src="./logos/val.jpg" alt="blog feito para minha esposa" />
+                                </div>
+                                <div>
+                                    <h3>Blog da Valéria</br> Sit: Maquiagem e Dicas de Beleza</h3>
+                                    <p>
+                                        Meu primeiro projeto feito para aprimorar minhas habilidades,
+                                        e para ajudar a divulgar o trabalho da minha esposa.
+                                        Criado com (HTML, CSS, JavaScript, jQuery, AOS, Popup)
+                                    </p>
+                                    </br>
+                                    <a href="https://valeria-blog.vercel.app/index.html" target="_blank">Veja o Projeto aqui &rarr;</a>
+                                </div>
+                            </li>
+            
+                            <li>
+                                <div>
+                                    <img src="./logos/Designer.jpeg" alt="Intellecte o chatbot" />
+                                </div>
+                                <div>
+                                    <h3>Olá, meu nome é Intellecte o chatbot</br></h3>
+                                    <p>
+                                        Olá! 👋
+                                        Fui criado pelo meu desenvolvedor para responder às suas perguntas sobre ele. Sou uma ferramenta amigável e pronta para ajudá-lo a conhecer melhor quem me criou.</br>
+                                        Clique no link abaixo para saber mais sobre nós. Vamos conversar e explorar juntos!
+                                    </p>
+                                    </br>
+                                    <a href="https://intellecte-o-chatbot.vercel.app" target="_blank">Veja o Projeto aqui &rarr;</a>
+                                </div>
+                            </li>
+            
+                            <li>
+                                <div>
+                                    <img src="./logos/Imagem do WhatsApp de 2024-07-02 à(s) 23.16.08_52bccdb3.jpg" alt="delivery" />
+                                </div>
+                                <div>
+                                    <h3>Quiz Interativo</h3>
+                                    <p>
+                                        Este projeto foi desenvolvido com o objetivo de aplicar conhecimentos adquiridos e criar uma 
+                                        ferramenta prática que auxilie na compreensão e gerenciamento do TPM (Total Productive Maintenance) 
+                                        na empresa em que trabalho. Além disso, planejo expandir este projeto para incluir materiais relacionados aos cursos 
+                                        da faculdade que estou atualmente cursando.
+                                    </p>
+                                    </br>
+                                    <a href="https://quiz-interativo-chi.vercel.app" target="_blank">Veja o Projeto aqui &rarr;</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+<!-- Colocar conteuso depois " 
+
+                    <div class="tab-pane" id="aba2">  <Conteúdo da aba "Projetos feitos com EBAC" >
+                        Projetos feitos com EBAC.
+                    </div>
+
+
+
+
+                    <div class="tab-pane" id="aba3">  <Conteúdo da aba "Projetos de exercício da EBAC" >
+                        Projetos de exercicio da EBAC.
+                    </div>
+                -->
+
+
+
             </div>
-            <ul class="ul03">
 
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/val.jpg" alt="blog feito para minha esposa" />
-                    </div>
-                    <div>
-                        <h3>Blog da Valéria</br> Sit: Maquiagem e Dicas de Beleza</h3>
-                        <p>
-                            Meu primeiro projeto feito para aprimorar minhas habilidades,
-                            e para ajudar a divulgar o trabalho da minha esposa.
-                            Criado com (HTML, CSS, JavaScript, jQuery, AOS, Popup)
-                        </p>
-                        </br>
-                        <a href="https://valeria-blog.vercel.app/index.html" target="_blank">Veja o Projeto aqui &rarr;</a>
-                    </div>
-                </li>
-
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/Designer.jpeg" alt="Intellecte o chatbot" />
-                    </div>
-                    <div>
-                        <h3>Olá, meu nome é Intellecte o chatbot</br></h3>
-                        <p>
-                            Olá! 👋
-                            Fui criado pelo meu desenvolvedor para responder às suas perguntas sobre ele. Sou uma ferramenta amigável e pronta para ajudá-lo a conhecer melhor quem me criou.</br>
-                            Clique no link abaixo para saber mais sobre nós. Vamos conversar e explorar juntos!
-                        </p>
-                        </br>
-                        <a href="https://intellecte-o-chatbot.vercel.app" target="_blank">Veja o Projeto aqui &rarr;</a>
-                    </div>
-                </li>
-
-                <li data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom">
-                    <div>
-                        <img src="./logos/Imagem do WhatsApp de 2024-07-02 à(s) 23.16.08_52bccdb3.jpg" alt="delivery" />
-                    </div>
-                    <div>
-                        <h3>Quiz Interativo</h3>
-                        <p>
-                            Este projeto foi desenvolvido com o objetivo de aplicar conhecimentos adquiridos e criar uma 
-                            ferramenta prática que auxilie na compreensão e gerenciamento do TPM (Total Productive Maintenance) 
-                            na empresa em que trabalho. Além disso, planejo expandir este projeto para incluir materiais relacionados aos cursos 
-                            da faculdade que estou atualmente cursando.
-                        </p>
-                        </br>
-                        <a href="https://quiz-interativo-chi.vercel.app" target="_blank">Veja o Projeto aqui &rarr;</a>
-                    </div>
-                </li>
-            </ul>
         </section>
 
         <!-- Certificado -->
@@ -492,6 +543,7 @@
 
     <!-- Scripts -->
     <script src="./JavaScript/scripts.js"></script>
+    <script src="./JavaScript/bootstrap.bundle.min.js"></script>
     <script src="./JavaScript/server.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./JavaScript/jquery.main.js"></script>
