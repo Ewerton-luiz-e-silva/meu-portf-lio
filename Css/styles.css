@@ -318,6 +318,16 @@ li:hover {
     justify-content: center;
 }
 
+.content-section {
+    max-height: 370px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.content-section.expanded {
+    max-height: 1300px; /* Ajuste conforme necessário */
+}
+
 .gallery-item {
     width: 100%;
     max-width: 350px;
@@ -455,6 +465,10 @@ li:hover {
         text-align: center;
     }
 
+    .content-section.expanded {
+        max-height: 2800px; /* Ajuste conforme necessário */
+    }
+
     .des {
         width: auto;
         margin-right: 0%;
@@ -543,6 +557,16 @@ li:hover {
         width: 100%;
         max-width: 100%;
         margin: 10px 0;
+    }
+
+    .content-section {
+        max-height: 1130px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+    
+    .content-section.expanded {
+        max-height: 2600px; /* Ajuste conforme necessário */
     }
 
     .des {
