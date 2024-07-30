@@ -80,3 +80,14 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(skillBar);
     });
 });
+
+$(document).ready(function() {
+    $('#toggleButton').on('click', function() {
+        $('#contentSection').toggleClass('expanded');
+        if ($('#contentSection').hasClass('expanded')) {
+            $('#toggleButton').text('Ver menos');
+        } else {
+            $('#toggleButton').text('Ver mais');
+        }
+    });
+});
