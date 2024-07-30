@@ -9,11 +9,15 @@ body {
     color: #333;
 }
 
-header {
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
     background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: #fff;
-    padding: 20px 0;
+    padding: 5px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 header h1 {
@@ -25,7 +29,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+}
+
+.nav01{
+    justify-content: center;
 }
 
 .menu {
@@ -135,14 +142,18 @@ nav {
 .section03 .des04 .abas {
     background-color: #2575fc;
     color: #fff;
-    font-weight:bold;
-    padding: 10px 5px;
+    font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
     outline: none; /* Remove outline ao focar */
     border-bottom: transparent solid 2px;
     border-left: transparent solid 4px;
     border-right: transparent solid 4px;
     border-top: transparent solid 2px;
+}
+
+.abas {
+    margin: 5px;
+    border-radius: 5px;
 }
 
 .section03 .des04 .abas:hover,
@@ -356,20 +367,21 @@ li:hover {
 /* Porcentagem */
 
 .skill-bar {
-    width: 80%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background-color: #ddd;
-    border-radius: 25px;
-    margin: 20px 0;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin-left: 10%;
 }
 
 .skill-bar-inner {
-    height: 30px;
+    height: 20px;
     width: 0;
     background-color: rgba(1, 100, 370, 0.4);
-    border-radius: 25px 0 0 25px;
+    border-radius: 20px 0 0 20px;
     transition: width 2s;
     display: flex;
     align-items: center;
@@ -382,10 +394,10 @@ li:hover {
 .skill-bar-inner .skill-bar-percentage {
     position: absolute;
     right: 10px;
-    top: 5px;
-    font-size: 16px;
+    top: 0;
+    font-size: 15px;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 /* Responsividade */
@@ -451,6 +463,26 @@ li:hover {
 }
 
 @media (max-width: 768px) {
+
+
+    .menu {
+    gap: 0px;
+    }
+    
+    .menu a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 0px 10px;
+        transition: background 0.3s, color 0.3s;
+    }
+    
+    .menu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #000;
+    }
+
+
     .section01, .section02, .section03, .section04, .section05, .section06 {
         padding: 30px 10px;
         text-align: center;
@@ -487,11 +519,18 @@ li:hover {
         width: 100%;
         flex-direction: column;
         align-items: center;
+        padding-left: 0%;
     }
 
     .ul01 li, .ul02 li, .ul03, .ul04 li {
         width: 100%;
         max-width: 100%;
+        padding-left: 0%;
+    }
+
+    .abas {
+        margin: 5px;
+        border-radius: 5px;
     }
 
     .gallery {
